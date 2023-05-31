@@ -2,8 +2,11 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
-  --primary-color: rgb(238, 77, 45);
+  --primary-color: #962bfa;
   --border-color: #dbdbdb;
+  --header-height: 150px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 /* Animation */

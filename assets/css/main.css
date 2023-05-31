@@ -1,16 +1,17 @@
 .header {
-  height: 120px;
-  background-image: linear-gradient(0, #fe6433, #f53e2d);
+  height: var(--header-height);
+  background-image: linear-gradient(90deg, #fb89dd, #962bfa);
 }
 
 /* Header navbar */
 .header__navbar {
   display: flex;
   justify-content: space-between;
+  height: var(--navbar-height);
 }
 
 .header__navbar-list {
-  margin-top: 4px;
+  margin: 4px 0 0 0;
   list-style: none;
   padding-left: 0;
   display: flex;
@@ -93,7 +94,8 @@
   position: absolute;
   left: 0;
   top: calc(100% + 4px);
-  padding: 8px; /*100% chiều cao của parent chứa */
+  padding: 8px;
+  /*100% chiều cao của parent chứa */
   border-radius: 2px;
   display: none;
   animation: fadeIn ease-in 0.2s;
@@ -171,6 +173,7 @@
     opacity: 0;
     transform: scale(0);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -330,6 +333,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .auth-form__controls-back {
   margin-right: 8px;
 }
@@ -374,11 +378,11 @@
   color: #939393;
 }
 
-.auth-form__help-forgot{
+.auth-form__help-forgot {
   color: var(--primary-color);
 }
 
-.auth-form__help-separate{
+.auth-form__help-separate {
   border: 1px solid #eaeaea;
   margin: 0 16px;
 }
@@ -388,4 +392,68 @@
   color: var(--white-color);
   margin-right: 8px;
   flex: 1;
+}
+
+/* Header with search */
+.header-with-search {
+  height: var(--header-with-search-height);
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 200px;
+}
+
+.header__logo-img {
+  width: 200px;
+}
+
+.header__search-bar {
+  background-color: var(--white-color);
+  flex: 1;
+  height: 40px;
+  margin-left: 32px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.header__search-bar-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  color: var(--text-color);
+  border-radius: 3px;
+  font-size: 1.4rem;
+}
+
+.header__search-bar-select {
+  border-left: 1px solid #ccc;
+  padding-left: 16px;
+}
+
+.header__search-bar-select-label {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.header__search-bar-select-icon {
+  font-size: 1.4rem;
+  color: #4A4A4A;
+  margin: 4px 8px 0 8px;
+}
+
+.header__cart {
+  width: 150px;
+  display: flex;
+}
+
+.header__cart-icon {
+  font-size: 2.4rem;
+  margin: auto;
+  color: var(--white-color);
+
 }
