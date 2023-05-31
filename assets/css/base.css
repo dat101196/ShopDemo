@@ -3,6 +3,26 @@
   --black-color: #000;
   --text-color: #333;
   --primary-color: rgb(238, 77, 45);
+  --border-color: #dbdbdb;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes growth {
+  from {
+    transform: scale(var(--grow-from));
+  }
+  to {
+    transform: scale(var(--grow-to));
+  }
 }
 
 * {
@@ -31,12 +51,67 @@ html {
   flex-wrap: wrap;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  animation: fadeIn linear .1s;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  --grow-from: 0.7;
+  --grow-to: 1;
+  margin: auto;
+  z-index: 1;
+  animation: growth linear 0.1s;
+}
+
+/* Button */
+.btn {
+  min-width: 142px;
+  height: 34px;
+  border: none;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 0 12px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.btn.btn--disabled {
+  color: #949494;
+  cursor: default;
+  background-color: #ccc;
+}
+
+.btn.btn--size-s{
+  height: 32px;
+  font-size: 1.2rem;
+  padding: 0 8px;
 }
