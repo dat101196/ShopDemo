@@ -145,6 +145,7 @@
   transform-origin: calc(100% - 40px) top;
   animation: headerNotifyGrowth ease-in 0.2s;
   display: none;
+  z-index: 1;
 }
 
 /* Làm dấu mũi tên ^ trỏ vào chữ thông báo cho bảng thông báo */
@@ -208,7 +209,7 @@
 }
 
 .header__notify-item:hover {
-  background-color: #f7f7f7;
+  background-color: var(--option-item-hover-color);
 }
 
 .header__notify-link {
@@ -339,7 +340,7 @@
 }
 
 .auth-form__socials {
-  background-color: #f5f5f5;
+  background-color: var(--option-item-hover-color);
   padding: 16px 36px;
   margin-top: 16px;
   display: flex;
@@ -401,6 +402,7 @@
   align-items: center;
 }
 
+/* Logo */
 .header__logo {
   width: 200px;
 }
@@ -408,6 +410,8 @@
 .header__logo-img {
   width: 200px;
 }
+
+/* Search bar */
 
 .header__search-bar {
   background-color: var(--white-color);
@@ -419,8 +423,14 @@
   align-items: center;
 }
 
-.header__search-bar-input {
+.header__search-bar-wrap {
   flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.header__search-bar-input {
+  width: 100%;
   height: 100%;
   border: none;
   outline: none;
@@ -430,9 +440,83 @@
   font-size: 1.4rem;
 }
 
+.header__search-bar-input:focus ~.header__search-bar-history {
+  display: block;
+  animation: fadeIn ease-in .2s;
+}
+
+/* Search history */
+.header__search-bar-history {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  width: calc(100% - 16px);
+  background-color: var(--white-color);
+  border-radius: 3px;
+  box-shadow: var(--box-shadow-default);
+  display: none;
+}
+
+.header__search-bar-history-heading {
+  margin: 16px 8px 8px 8px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #999;
+}
+
+.header__search-bar-history-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 6px 0 0 0;
+}
+
+.header__search-bar-history-item {
+  height: 38px;
+  padding: 0 8px;
+  border-radius: 3px;
+}
+
+.header__search-bar-history-item:hover {
+  background-color: var(--option-item-hover-color);
+}
+
+.header__search-bar-history-item a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  line-height: 38px;
+}
+
+/* Search button */
+.header__search-bar-btn {
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  height: 34px;
+  border-radius: 3px;
+  margin-right: 3px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.header__search-bar-btn:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.header__search-bar-btn-icon {
+  font-size: 1.4rem;
+  color: var(--white-color);
+}
+
+/* Search bar select */
 .header__search-bar-select {
   border-left: 1px solid #ccc;
   padding-left: 16px;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .header__search-bar-select-label {
@@ -442,10 +526,69 @@
 
 .header__search-bar-select-icon {
   font-size: 1.4rem;
-  color: #4A4A4A;
-  margin: 4px 8px 0 8px;
+  color: #4a4a4a;
+  margin: 0 8px 0 4px;
+  position: relative;
+  top: 1px;
 }
 
+.header__search-bar-select:hover .header__search-bar-option {
+  display: block;
+}
+
+.header__search-bar-option {
+  padding-left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  list-style-type: none;
+  width: 140px;
+  border-radius: 3px;
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-default);
+  display: none;
+  animation: fadeIn ease-in 0.2s;
+}
+
+.header__search-bar-option::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.header__search-bar-option-item {
+  background-color: var(--white-color);
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.header__search-bar-option-item:hover {
+  background-color: var(--option-item-hover-color);
+  cursor: pointer;
+}
+
+.header__search-bar-option-item-span {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-left: 8px;
+}
+
+.header__search-bar-option-item .header__search-bar-option-item-icon {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 0 0 0 4px;
+  display: none;
+}
+
+.header__search-bar-option-item--active .header__search-bar-option-item-icon {
+  display: inline-block;
+}
+
+/* Cart */
 .header__cart {
   width: 150px;
   display: flex;
@@ -455,5 +598,4 @@
   font-size: 2.4rem;
   margin: auto;
   color: var(--white-color);
-
 }

@@ -3,10 +3,13 @@
   --black-color: #000;
   --text-color: #333;
   --primary-color: #962bfa;
+  --primary-hover-color: #a445fc;
   --border-color: #dbdbdb;
+  --option-item-hover-color: #f7f7f7;
   --header-height: 150px;
   --navbar-height: 34px;
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+  --box-shadow-default: 1px 2px 3px #c2c2c2;
 }
 
 /* Animation */
@@ -76,7 +79,7 @@ html {
   --grow-from: 0.7;
   --grow-to: 1;
   margin: auto;
-  z-index: 1;
+  z-index: 10;
   animation: growth linear 0.1s;
 }
 

@@ -129,11 +129,43 @@
                     </div>
 
                     <div class="header__search-bar">
-                        <input type="text" class="header__search-bar-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                        <!-- Search Input -->
+                        <div class="header__search-bar-wrap">
+                            <input type="text" class="header__search-bar-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <div class="header__search-bar-history">
+                                <h3 class="header__search-bar-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-bar-history-list">
+                                    <li class="header__search-bar-history-item">
+                                        <a href="">Mon Couer</a>
+                                    </li>
+                                    <li class="header__search-bar-history-item">
+                                        <a href="">Soeur</a>
+                                    </li>
+                                    <li class="header__search-bar-history-item">
+                                        <a href="">Tezza</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Search Select -->
                         <div class="header__search-bar-select">
                             <span class="header__search-bar-select-label">Hoa hồng ngoại</span>
                             <i class="header__search-bar-select-icon fa-solid fa-angle-down"></i>
+                            <ul class="header__search-bar-option">
+                                <li class="header__search-bar-option-item header__search-bar-option-item--active">
+                                    <span class="header__search-bar-option-item-span">Hoa hồng ngoại</span>
+                                    <i class="header__search-bar-option-item-icon fa-solid fa-check"></i>
+                                </li>
+                                <li class="header__search-bar-option-item">
+                                    <span class="header__search-bar-option-item-span">Hoa hồng nội</span>
+                                    <i class="header__search-bar-option-item-icon fa-solid fa-check"></i>
+                                </li>
+                            </ul>
                         </div>
+                        <button class="header__search-bar-btn">
+                            <i class="header__search-bar-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
                     <div class="header__cart">
                         <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
