@@ -10,6 +10,7 @@
   --navbar-height: 34px;
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
   --box-shadow-default: 1px 2px 3px #c2c2c2;
+  --border-readius-default: 3px;
 }
 
 /* Animation */
