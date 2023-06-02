@@ -167,8 +167,22 @@
                             <i class="header__search-bar-btn-icon fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
+                    <!-- Cart -->
                     <div class="header__cart">
-                        <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">3</span>
+                            <!-- If empty cart add class header__cart-list--empty like example after -->
+                            <!-- <div class="header__cart-list header__cart-list--empty"> -->
+
+                            <div class="header__cart-list">
+                                <!-- Empty cart UI -->
+                                <img src="./assets/img/empty-cart.png" alt="" class="header__cart-no-cart-img">
+                                <p class="header__cart-no-cart-text">Giỏ hàng của bạn đang trống</p>
+                                <!--  -->
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
