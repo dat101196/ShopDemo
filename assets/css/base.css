@@ -2,15 +2,17 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
+  --text-light-gray-color: #999;
   --primary-color: #962bfa;
   --primary-hover-color: #a445fc;
+  --sub-color: #fb89dd;
   --border-color: #dbdbdb;
   --option-item-hover-color: #f7f7f7;
   --header-height: 150px;
   --navbar-height: 34px;
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
   --box-shadow-default: 1px 2px 3px #c2c2c2;
-  --border-readius-default: 3px;
+  --border-radius-default: 3px;
 }
 
 /* Animation */
@@ -98,7 +100,7 @@ html {
 
 /* Button */
 .btn {
-  min-width: 142px;
+  min-width: 124px;
   height: 34px;
   border: none;
   text-decoration: none;
@@ -121,6 +123,10 @@ html {
 .btn.btn--primary {
   color: var(--white-color);
   background-color: var(--primary-color);
+}
+
+.btn.btn--primary:hover {
+  background-color: var(--primary-hover-color);
 }
 
 .btn.btn--disabled {

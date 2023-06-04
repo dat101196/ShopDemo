@@ -112,11 +112,21 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                        <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
                             Đăng kí
                         </li>
                         <li class="header__navbar-item header__navbar-item--strong">
                             Đăng nhập
+                        </li> -->
+                        <li class="header__navbar-item header__navbar-item--show-user-info">
+                            <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/305933168_3381717092066066_2655106334285193360_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=FpfyUt4HwrcAX_E8d-u&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfD0kbcWv2bfCy1CZL1t8HZOvkcfzWE4DG5H49v4YLVhdg&oe=648235B8" alt="avatar" class="header__navbar-item-user-img">
+                            <span class="header__navbar-item-user-name">Đặng Anh Tâm</span>
+                            <ul class="header__navbar-item-user-menu">
+                                <li class="header__navbar-item-user-menu-item"><a href="">Tài khoản của tôi</a></li>
+                                <li class="header__navbar-item-user-menu-item"><a href="">Địa chỉ</a></li>
+                                <li class="header__navbar-item-user-menu-item"><a href="">Đơn mua</a></li>
+                                <li class="header__navbar-item-user-menu-item"><a href="">Đăng xuất</a></li>
+                            </ul>
                         </li>
                     </ul>
 
@@ -163,7 +173,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="header__search-bar-btn">
+                        <button class="btn btn--primary header__search-bar-btn">
                             <i class="header__search-bar-btn-icon fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
@@ -171,7 +181,7 @@
                     <div class="header__cart">
                         <div class="header__cart-wrap">
                             <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-                            <span class="header__cart-notice">3</span>
+                            <span class="header__cart-number-badge">3</span>
                             <!-- If empty cart add class header__cart-list--empty like example after -->
                             <!-- <div class="header__cart-list header__cart-list--empty"> -->
 
@@ -180,7 +190,71 @@
                                 <img src="./assets/img/empty-cart.png" alt="" class="header__cart-no-cart-img">
                                 <p class="header__cart-no-cart-text">Giỏ hàng của bạn đang trống</p>
                                 <!--  -->
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <div class="header__cart-list-items">
+                                    <a href="https://google.com" class="header__cart-item">
+                                        <img src="./assets/img/rose/masora.jpg" alt="Hoa hồng Masora"
+                                            class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Hoa hồng ngoại Masora</h5>
+                                                <div class="header__cart-ite-price-wrap">
+                                                    <span class="header__cart-item-price">120.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-quantity">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bụi trung - 3gl
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://google.com" class="header__cart-item">
+                                        <img src="./assets/img/rose/miranda.jpg" alt="Hoa hồng Miranda"
+                                            class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Hoa hồng ngoại miranda</h5>
+                                                <div class="header__cart-ite-price-wrap">
+                                                    <span class="header__cart-item-price">60.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-quantity">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bụi nhỏ - 1gl
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://google.com" class="header__cart-item">
+                                        <img src="./assets/img/rose/tezza-cam.jpg" alt="Hoa hồng Tezza cam"
+                                            class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Hoa hồng Juicy Terazza - Tezza cam cá hồi</h5>
+                                                <div class="header__cart-ite-price-wrap">
+                                                    <span class="header__cart-item-price">200.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-quantity">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bụi to - 5gl
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
 
+                                <a href="#" class="header__cart-review btn btn--primary">Xem giỏ hàng</a>
                             </div>
                         </div>
                     </div>
