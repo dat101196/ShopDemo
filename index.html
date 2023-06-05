@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/themify-icons.css">
 </head>
 
 <body>
@@ -53,7 +54,7 @@
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--show-notify">
                             <a href="" class="header__navbar-item-link">
-                                <i class="header__navbar-icon fa-regular fa-bell"></i>
+                                <i class="header__navbar-icon ti-bell"></i>
                                 Thông báo
                             </a>
                             <div class="header__notify">
@@ -108,7 +109,7 @@
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">
-                                <i class="header__navbar-icon fa-regular fa-circle-question"></i>
+                                <i class="header__navbar-icon ti-help-alt"></i>
                                 Trợ giúp
                             </a>
                         </li>
@@ -119,13 +120,16 @@
                             Đăng nhập
                         </li> -->
                         <li class="header__navbar-item header__navbar-item--show-user-info">
-                            <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/305933168_3381717092066066_2655106334285193360_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=FpfyUt4HwrcAX_E8d-u&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfD0kbcWv2bfCy1CZL1t8HZOvkcfzWE4DG5H49v4YLVhdg&oe=648235B8" alt="avatar" class="header__navbar-item-user-img">
+                            <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/305933168_3381717092066066_2655106334285193360_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=FpfyUt4HwrcAX_E8d-u&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfD0kbcWv2bfCy1CZL1t8HZOvkcfzWE4DG5H49v4YLVhdg&oe=648235B8"
+                                alt="avatar" class="header__navbar-item-user-img">
                             <span class="header__navbar-item-user-name">Đặng Anh Tâm</span>
                             <ul class="header__navbar-item-user-menu">
                                 <li class="header__navbar-item-user-menu-item"><a href="">Tài khoản của tôi</a></li>
                                 <li class="header__navbar-item-user-menu-item"><a href="">Địa chỉ</a></li>
                                 <li class="header__navbar-item-user-menu-item"><a href="">Đơn mua</a></li>
-                                <li class="header__navbar-item-user-menu-item"><a href="">Đăng xuất</a></li>
+                                <li
+                                    class="header__navbar-item-user-menu-item header__navbar-item-user-menu-item--separate">
+                                    <a href="">Đăng xuất</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -135,7 +139,9 @@
                 <!-- Header with search -->
                 <div class="header-with-search">
                     <div class="header__logo">
-                        <img class="header__logo-img" src="./assets/img/rose_logo.png" alt="">
+                        <a href="/" class="header__logo-link">
+                            <img class="header__logo-img" src="./assets/img/rose_logo.png" alt="">
+                        </a>
                     </div>
 
                     <div class="header__search-bar">
@@ -237,7 +243,8 @@
                                             class="header__cart-item-img">
                                         <div class="header__cart-item-info">
                                             <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Hoa hồng Juicy Terazza - Tezza cam cá hồi</h5>
+                                                <h5 class="header__cart-item-name">Hoa hồng Juicy Terazza - Tezza cam cá
+                                                    hồi</h5>
                                                 <div class="header__cart-ite-price-wrap">
                                                     <span class="header__cart-item-price">200.000đ</span>
                                                     <span class="header__cart-item-multiply">x</span>
@@ -261,8 +268,67 @@
                 </div>
             </div>
         </header>
-        <div class="container">
+        <div class="app__container">
+            <div class="grid">
+                <div class="product-container grid__row">
+                    <div class="grid__column-2">
+                        <nav class="product-category">
+                            <h3 class="product-category__heading">
+                                <i class="product-category__heading-icon ti-menu-alt"></i>
+                                Danh mục
+                            </h3>    
+            
+                            <ul class="product-category-list">
+                                <li class="product-category-item product-category-item--active">
+                                    <a href="#" class="product-category-item__link">Hoa hồng ngoại</a>
+                                </li>
+                                <li class="product-category-item">
+                                    <a href="#" class="product-category-item__link">Hoa hồng nội</a>
+                                </li>
+                                <li class="product-category-item">
+                                    <a href="#" class="product-category-item__link">Hoa hồng tree</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid__column-10">
+                        <div class="product-filter">
+                            <span class="product-filter__label">Sắp xếp theo</span>
+                            <button class="product-filter__btn btn">Phổ biến</button>
+                            <button class="product-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="product-filter__btn btn">Bán chạy</button>
 
+                            <div class="product-sort select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fa-solid fa-angle-down"></i>
+                                <ul class="product-sort__list">
+                                    <li class="product-sort__item">
+                                        <a href="" class="product-sort__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="product-sort__item">
+                                        <a href="" class="product-sort__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="product-filter__paging">
+                                <span class="product-filter__paging-page">
+                                    <span class="product-filter__paging-page-current">1</span>/14
+                                </span>
+
+                                <div class="product-filter__paging-control">
+                                    <a href="" class="product-filter__paging-btn">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="product-filter__paging-btn">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="footer">
 

@@ -10,7 +10,9 @@
   --option-item-hover-color: #f7f7f7;
   --header-height: 150px;
   --navbar-height: 34px;
-  --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+  --header-with-search-height: calc(
+    var(--header-height) - var(--navbar-height)
+  );
   --box-shadow-default: 1px 2px 3px #c2c2c2;
   --border-radius-default: 3px;
 }
@@ -57,6 +59,7 @@ html {
   box-sizing: border-box;
 }
 
+/* Responsive */
 .grid {
   width: 1200px;
   max-width: 100%;
@@ -70,6 +73,20 @@ html {
 .grid__row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+/* Test column */
+.grid__column-2 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 16.6667%;
+}
+
+.grid__column-10 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 83.3333%;
 }
 
 /* Modal */
@@ -80,7 +97,7 @@ html {
   bottom: 0;
   left: 0;
   display: flex;
-  animation: fadeIn linear .1s;
+  animation: fadeIn linear 0.1s;
 }
 
 .modal__overlay {
@@ -110,13 +127,13 @@ html {
   outline: none;
   cursor: pointer;
   color: var(--text-color);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   line-height: 1.6rem;
 }
 
-.btn.btn--normal:hover{
+.btn.btn--normal:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -135,8 +152,31 @@ html {
   background-color: #ccc;
 }
 
-.btn.btn--size-s{
+.btn.btn--size-s {
   height: 32px;
   font-size: 1.2rem;
   padding: 0 8px;
+}
+
+/* Select input */
+.select-input {
+  min-width: 200px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: var(--border-radius-default);
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-input__label {
+  font-size: 1.4rem;
+}
+
+.select-input__icon {
+  font-size: 1.4rem;
+  color: #4a4a4a;
+  position: relative;
+  top: 1px;
 }
