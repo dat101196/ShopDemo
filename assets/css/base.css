@@ -7,12 +7,10 @@
   --primary-hover-color: #a445fc;
   --sub-color: #fb89dd;
   --border-color: #dbdbdb;
-  --option-item-hover-color: #f7f7f7;
+  --option-item-hover-color: #f3f3f3;
   --header-height: 150px;
   --navbar-height: 34px;
-  --header-with-search-height: calc(
-    var(--header-height) - var(--navbar-height)
-  );
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
   --box-shadow-default: 1px 2px 3px #c2c2c2;
   --border-radius-default: 3px;
 }
@@ -22,6 +20,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -31,6 +30,7 @@
   from {
     transform: scale(var(--grow-from));
   }
+
   to {
     transform: scale(var(--grow-to));
   }
@@ -76,6 +76,7 @@ html {
   margin-left: -12px;
   margin-right: -12px;
 }
+
 /* Test column */
 .grid__column-2 {
   padding-left: 12px;
@@ -160,6 +161,7 @@ html {
 
 /* Select input */
 .select-input {
+  position: relative;
   min-width: 200px;
   height: 34px;
   padding: 0 12px;
@@ -168,6 +170,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.select-input:hover .select-input__list{
+  display: block !important;
 }
 
 .select-input__label {
@@ -179,4 +185,29 @@ html {
   color: #4a4a4a;
   position: relative;
   top: 1px;
+}
+
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border-radius: var(--border-radius-default);
+  background-color: var(--white-color);
+  list-style-type: none;
+  padding: 0;
+  display: none;
+  animation: fadeIn ease-in 0.2s;
+}
+
+.select-input__link {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  padding: 10px 16px;
+}
+
+.select-input__link:hover {
+  background-color: var(--option-item-hover-color);
 }
