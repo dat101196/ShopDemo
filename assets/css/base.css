@@ -8,6 +8,7 @@
   --sub-color: #fb89dd;
   --border-color: #dbdbdb;
   --option-item-hover-color: #f3f3f3;
+  --star-gold-color: #FFCE3E;
   --header-height: 150px;
   --navbar-height: 34px;
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
