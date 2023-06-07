@@ -1023,10 +1023,24 @@
   color: #555;
 }
 /* All product */
+.all-product{
+  margin-bottom: 10px;
+}
 .product-item {
+  display: block;
   position: relative;
   background-color: var(--white-color);
   margin-top: 10px;
+  padding-bottom: 10px;
+  border-radius: var(--border-radius-default);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: transform ease-in 0.1s;
+
+}
+
+.product-item:hover{
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
 }
 
 .product-item__img {
@@ -1037,7 +1051,7 @@
     -contain: thu nhỏ ảnh lại(nếu ảnh to) để vừa khung hình và giữ tỉ lệ => sẽ xuất hiện khoảng trống nếu tỉ lệ hình và khung chứa khác nhau.
     -cover: thu nhỏ ảnh lại(nếu ảnh to) và sẽ lấp đầy khung chứa theo tỉ lệ khung chứa, => bị mất ảnh 1 phần nếu tỉ lệ hình và khung chứa khác nhau.
   */
-  background-size: cover;
+  background-size: contain;
   /* background-position: center để lấy trọng tâm là giữa ảnh */
   background-position: center;
 }
@@ -1122,7 +1136,7 @@ i.product-item__wish-list-icon-active {
 .product-item__origin {
   display: flex;
   justify-content: space-between;
-  margin: 1px 10px 0 0;
+  margin: 1px 10px 0px;
   color: #595959;
   font-weight: 300;
   font-size: 1.1rem;
@@ -1166,11 +1180,46 @@ i.product-item__wish-list-icon-active {
   font-size: 1rem;
   margin: 0 3px 0 5px;
 }
+
 .product-item__sale-off {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 36px;
+  background-color: rgba(255, 216, 64, 0.94);
+  text-align: center;
+  border-top-right-radius: var(--border-radius-default);
+}
+
+.product-item__sale-off::before{
+  --gold-bg-color:rgba(255, 216, 64, 0.94);
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  /* Tạo vạt dưới chữ giảm của label sale-off */
+  border-width: 0px 20px 4px;/* top left-right bottom */
+  border-style: solid;
+  border-color: transparent var(--gold-bg-color) transparent var(--gold-bg-color);
+  
+}
+
+.product-item__sale-off p{
+  margin: 4px 0 0 0;
 }
 
 .product-item__sale-off-percent {
+  color: #ee4d2d;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 }
 
 .product-item__sale-off-label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: var(--primary-color);
 }
