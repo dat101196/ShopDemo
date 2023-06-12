@@ -1,10 +1,8 @@
 .header {
   height: var(--header-height);
-  background-image: linear-gradient(
-    90deg,
-    var(--sub-color),
-    var(--primary-color)
-  );
+  background-image: linear-gradient(90deg,
+      var(--sub-color),
+      var(--primary-color));
 }
 
 /* Header navbar */
@@ -489,10 +487,6 @@
 }
 
 /* Logo */
-.header__logo {
-  width: 200px;
-}
-
 .header__logo-link {
   text-decoration: none;
   color: transparent;
@@ -531,7 +525,7 @@
   font-size: 1.4rem;
 }
 
-.header__search-bar-input:focus ~ .header__search-bar-history {
+.header__search-bar-input:focus~.header__search-bar-history {
   display: block;
   animation: fadeIn ease-in 0.2s;
 }
@@ -795,7 +789,7 @@
 .header__cart-list-items {
   padding-left: 0;
   list-style-type: none;
-  height: 30vh;
+  max-height: 30vh;
   overflow-y: auto;
 }
 
@@ -896,6 +890,54 @@
   float: right;
   margin: 12px 12px 12px 0;
 }
+
+.header__sort-bar {
+  position: fixed;
+  margin: 0;
+  padding-left: 0;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: var(--header-sort-bar-height);
+  background-color: var(--white-color);
+  list-style-type: none;
+  display: flex;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__sort-item {
+  flex: 1;
+}
+
+.header__sort-item--active .header__sort-link {
+  color: var(--primary-color);
+}
+
+.header__sort-link {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-color);
+  line-height: var(--header-sort-bar-height);
+  position: relative;
+}
+
+.header__sort-link::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 60%;
+  border-left: 1px solid var(--border-color);
+}
+
+.header__sort-item:first-child .header__sort-link::before {
+  display: none;
+}
+
 
 /* App container */
 .app__container {
@@ -1033,6 +1075,7 @@
   font-size: 1.4rem;
   color: #555;
 }
+
 /* All product */
 .all-product {
   margin-bottom: 10px;
@@ -1050,6 +1093,7 @@
   padding-top: 16px;
   border-top: 4px solid var(--primary-color);
 }
+
 .footer__heading {
   font-size: 1.4rem;
   text-transform: uppercase;

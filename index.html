@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./assets/css/product.css">
     <link rel="stylesheet" href="./assets/css/button.css">
     <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    
     <!-- <link rel="stylesheet" href="./assets/css/grid_simulation.css"> -->
     
     
@@ -33,7 +34,7 @@
     <div class="app">
         <header class="header">
             <div class="grid wide">
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--show-qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng
@@ -278,6 +279,20 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
         <div class="app__container">
             <div class="grid wide">
@@ -305,7 +320,7 @@
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        <div class="product-filter">
+                        <div class="product-filter hide-on-mobile-tablet">
                             <span class="product-filter__label">Sắp xếp theo</span>
                             <button class="product-filter__btn btn">Phổ biến</button>
                             <button class="product-filter__btn btn btn--primary">Mới nhất</button>
@@ -329,14 +344,14 @@
                                     <span class="product-filter__paging-page-current">1</span>/4
                                 </span>
 
-                                <!-- <div class="product-filter__paging-control">
+                                <div class="product-filter__paging-control">
                                     <a href="" class="product-filter__paging-btn product-filter__paging-btn--disabled">
                                         <i class="product-filter__paging-icon fa-solid fa-angle-left"></i>
                                     </a>
                                     <a href="" class="product-filter__paging-btn">
                                         <i class="product-filter__paging-icon fa-solid fa-angle-right"></i>
                                     </a>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
 
