@@ -486,6 +486,21 @@
   align-items: center;
 }
 
+.header__mobile-search {
+  padding: 0 12px;
+  width: 50px;
+  display: none;
+}
+
+.header__mobile-search-icon {
+  color: var(--white-color);
+  font-size: 2.6rem;
+}
+
+.header__mobile-search-checkbox:checked ~ .header__search-bar{
+  display: flex;
+}
+
 /* Logo */
 .header__logo-link {
   text-decoration: none;
@@ -901,9 +916,9 @@
   height: var(--header-sort-bar-height);
   background-color: var(--white-color);
   list-style-type: none;
-  display: flex;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  display: none;
 }
 
 .header__sort-item {
